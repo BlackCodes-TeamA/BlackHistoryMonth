@@ -1,4 +1,10 @@
 import './App.css';
+import {Link} from 'react-router'
+import JournalismQuiz from './components/pages/JournalismQuiz';
+import Catagories from './components/Catagories';
+
+
+
 function App() {
   return (
     <div className='login-form'>
@@ -31,6 +37,14 @@ function App() {
               Login 
               </button>
       </form>
+      <JournalismQuiz/>
+      <div className="catagory__display">
+      <Catagories/>
+      <Catagories/>
+      <Catagories/>
+      <Catagories/>
+      
+      </div>
     </div>
 
   );

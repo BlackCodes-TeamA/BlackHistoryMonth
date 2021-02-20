@@ -51,3 +51,9 @@
   width: 80%;
   text-align: center;
 }
+.catagory__display{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+
+}
