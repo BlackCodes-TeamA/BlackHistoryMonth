@@ -1,14 +1,48 @@
-import Ali from '../components/images/ALi.jpeg'
+import Ali from '../images/ALi.jpeg'
+import Bob from '../images/BobMarley.jpg'
+import Harriet from '../images/HarrietTubman.jpg'
+import Science from '../images/Science.jpg'
+import './Catagories.css'
+import CatagoryItem from './CatagoryItem'
 
-
-const Catagories = () => {
+function Catagories() {
     return (
-        <div className='Catagory'>
-            <img src={Ali} alt="Ali"></img>
-            <div className='catagory__info'>
-                <p className='catagory__name'>Sport</p>
-            </div>
+        <div className='catagories'>
+        <h1>Choose one of our catagories</h1>
+        <div className='catagory__container'>
+        <div className='catagory__wrapper'>
+          <ul className='catagory__items'>
+        <CatagoryItem
+              src={Ali}
+              text='Sports Quiz'
+              label='Sport'
+              path='/sport'
+            />
+            <CatagoryItem
+              src={Bob}
+              text='Music Quiz'
+              label='Music'
+              path='/music'
+            />
+          </ul>
+          <ul className='catagory__items'>
+            <CatagoryItem
+              src={Science}
+              text='Science Quiz'
+              label='Science'
+              path='/science'
+            />
+            <CatagoryItem
+              src={Harriet}
+              text='History Quiz'
+              label='History'
+              path='/history'
+            />
+    </ul>
         </div>
+      </div>
+      </div>
+
     )
 }
 

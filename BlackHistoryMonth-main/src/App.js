@@ -1,52 +1,36 @@
 import './App.css';
-import {Link} from 'react-router'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import './components/forms/FormSignup'
+import HistoryQuiz from './components/pages/HistoryQuiz';
+import MusicQuiz from './components/pages/MusicQuiz';
+import SportsQuiz from './components/pages/SportsQuiz';
+import ScienceQuiz from './components/pages/ScienceQuiz';
+import Form from './components/forms/Form';
 import Catagories from './components/pages/Catagories';
+import './components/pages/Catagories.css'
+import RegisteredForm from './components/forms/RegisteredForm';
 
 
 
 function App() {
   return (
-    <div className='login-form'>
-      <form className='form'>
-      <h1>BHM Hackathon
-      </h1>
-      <div className='form-inputs'>
-        <label htmlFor='username'
-        className='form-label'>
-        Username
-        </label>
-        <input
-        id='username'
-        type='text' name='username'
-        className='form-input'
-        placeholder="Username"/>
-        </div>
-          <div className='form-inputs'>
-            <label htmlFor='Password'
-            className='form-label'>
-            Password
-            </label>
-            <input
-            id='password'
-            type='password' name='password'
-            className='form-input'
-            placeholder="Password"/>
-            </div>
-              <button className='form-input-btn' type='submit'>
-              Login 
-              </button>
-      </form>
-     
-      <div className="catagory__display">
-      <Catagories/>
-      <Catagories/>
-      <Catagories/>
-      <Catagories/>
-      
-      </div>
-    </div>
 
-  );
+<>
+
+<Router>
+  <Switch/>
+        <Route path='/' exact component={Form}/>
+        <Route path='/history' component={HistoryQuiz}/>
+        <Route path='/music' component={MusicQuiz}/>
+        <Route path='/sport' component={SportsQuiz}/>
+        <Route path='/science' component={ScienceQuiz}/>
+        <Route path='/registered'component={RegisteredForm}/>
+        <Route path='/catagories' component={Catagories}/>
+
+  <Switch/>
+</Router>
+</>
+  )
 }
 
 export default App;
