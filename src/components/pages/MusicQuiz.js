@@ -1,13 +1,16 @@
-import './Quiz.css'
+import React, { Component } from 'react';
+import {MusicData} from './MusicData';
 
-const MusicQuiz = () => {
-    return ( 
-    <div className="questionBox">
-          <div className="question"></div>
-            <button className="answerBtn">
-            </button>
-          
-        </div>
-    )
+
+
+export class Music extends Component {
+    render() {
+        return (
+            <div>
+                <MusicData />
+            </div>
+        )
     }
-    export default MusicQuiz;
+}
+
+export default MusicQuiz;

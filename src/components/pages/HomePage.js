@@ -1,3 +1,4 @@
+import React from 'react';
 import './HomePage.css'
 import '../images/ALi.jpeg'
 import '../images/BobMarley.jpg'
@@ -8,5 +9,13 @@ import '../images/Oprah.jpg'
 import '../images/Sculpture.jpg'
 import '../images/WillieHobbs.jpeg'
 
+function Home() {
+    return (
+        <>
+        </>
+    );
+}
+
+export default Home;
 
 
